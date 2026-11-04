@@ -1015,6 +1015,8 @@ button.n-chip-ped{font-family:inherit;font-size:13px;font-weight:600;line-height
 .n-card-l{background:var(--card);border-radius:var(--r);padding:2px 16px;margin:0 0 16px}
 
 .n-ver{margin:28px 0 8px;text-align:center;font-size:12px;font-weight:500;color:var(--ink-3);opacity:.8}
+.n-cred{margin:0 0 8px;font-weight:600;line-height:1.4;padding:0 24px}
+.n-ver+.n-cred{margin-top:-2px}
 </style></head><body><div id="nx">
 <header id="bar" class="n-top"><div class="n-top-in">
  <button class="n-back" hidden><span></span></button>
@@ -8334,6 +8336,7 @@ PAGES.paz=()=>{
   }
   if(closed.length)h+=lab(TH('Chiusi'))+list(closed.map(c=>row({t:esc(nome(c)),k:dBreve(c.start),go:'caso|'+c.id})));
   h+='<p class="n-ver">'+APP_V+' · '+(APP_D[2]|0)+' '+MESI[(APP_D[1]|0)-1]+' '+APP_D[0]+'</p>';
+  h+='<p class="n-ver n-cred">Shai Marc Bohane \u2665\uFE0E Terapia Intensiva Generale San Raffaele, Milano</p>';
   return {t:'Infettiva',h:page(h)};
 };
 function phases(c,rg){
